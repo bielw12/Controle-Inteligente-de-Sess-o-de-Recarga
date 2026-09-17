@@ -1,13 +1,16 @@
 # ChargeGrid — Sprint 3: Controle Inteligente de Sessão de Recarga
 
+##Link Wokwi:
+[Raspberry Pi Pico - micropython]([https://url.com](https://wokwi.com/projects/475449892480950273))
+
+---
+
 Protótipo de um controlador de sessão de recarga para veículos elétricos, feito no **Raspberry Pi Pico (RP2040)** com **MicroPython** e simulado no **Wokwi**.
 
 O sistema compara a **geração** de energia com o **consumo** da residência e decide se a recarga do veículo pode acontecer, sinalizando o resultado em três LEDs e no Monitor Serial. A ideia é inspirada no conceito do **GoodWe Smart Energy Controller**: o carregador só usa a energia que sobra depois de atender a casa.
 
 - **Disciplina:** Arquitetura de Computadores — FIAP
 - **Plataforma:** Raspberry Pi Pico + MicroPython (Wokwi)
-- **Integrantes:** _(preencher)_
-- **Link do projeto no Wokwi:** _(preencher)_
 
 ---
 
