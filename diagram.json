@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "author": "ChargeGrid - Sprint 3",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": { "env": "micropython-20241129-v1.24.1" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_verde",
+      "top": 73.61,
+      "left": -155,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_amarelo",
+      "top": 143.61,
+      "left": -155,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_vermelho",
+      "top": 213.61,
+      "left": -155,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_verde",
+      "top": 109.96,
+      "left": -108.8,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_amarelo",
+      "top": 179.96,
+      "left": -108.8,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_vermelho",
+      "top": 249.96,
+      "left": -108.8,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_situacao",
+      "top": 163.21,
+      "left": 112.94,
+      "attrs": { "color": "blue", "label": "Proxima situacao" }
+    }
+  ],
+  "connections": [
+    [ "pico:GP13", "r_verde:2", "green", [ "h-25", "v-50.8" ] ],
+    [ "r_verde:1", "led_verde:A", "green", [] ],
+    [ "pico:GP14", "r_amarelo:2", "gold", [] ],
+    [ "r_amarelo:1", "led_amarelo:A", "gold", [] ],
+    [ "pico:GP15", "r_vermelho:2", "red", [ "h-25", "v60.4" ] ],
+    [ "r_vermelho:1", "led_vermelho:A", "red", [] ],
+    [ "led_verde:C", "led_amarelo:C", "black", [ "v10", "h-35", "*", "h-35", "v10" ] ],
+    [ "led_amarelo:C", "led_vermelho:C", "black", [ "v10", "h-35", "*", "h-35", "v10" ] ],
+    [ "led_verde:C", "pico:GND.2", "black", [ "v10", "h-35", "v-65.61", "h170", "*", "h-11.05" ] ],
+    [ "pico:GND.5", "btn_situacao:1.l", "black", [] ],
+    [ "pico:GP16", "btn_situacao:2.l", "blue", [] ]
+  ],
+  "dependencies": {}
+}
