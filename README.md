@@ -1,7 +1,7 @@
 # ChargeGrid — Sprint 3: Controle Inteligente de Sessão de Recarga
 
 ## Link Wokwi:
-[Raspberry Pi Pico - micropython]([https://url.com](https://wokwi.com/projects/475449892480950273))
+[Raspberry Pi Pico - micropython](https://wokwi.com/projects/475449892480950273)
 
 ---
 
